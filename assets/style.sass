@@ -79,30 +79,37 @@ main
                     text-decoration: none
                     flex-grow: 0.5
                     flex-shrink: 1
+                    background-blend-mode: multiply
 
                     &:hover
                         flex-grow: 2
                         flex-shrink: 0.8
                         &.bandcamp
-                            background: $color-bandcamp
+                            background: transparentize($color-bandcamp, 0.4)
                             color: $color-white
+                            color: lighten($color-bandcamp, $lighten-amount-focus)
                         &.soundcloud
-                            background: $color-soundcloud
+                            background: transparentize($color-soundcloud, 0.4)
                             color: $color-white
+                            color: lighten($color-soundcloud, $lighten-amount-focus)
                         &.spotify
-                            background: $color-spotify
+                            background: transparentize($color-spotify, 0.4)
                             color: $color-white
+                            color: lighten($color-spotify, $lighten-amount-focus)
                         &.threads
-                            background: $color-threads
+                            background: transparentize($color-threads,0.4)
                             color: $color-white
+                            color: lighten($color-threads, $lighten-amount-focus)
                         &.instagram
-                            background: $color-instagram
-                            background: -moz-radial-gradient(top left, $color-instagram, $color-instagram-secondary)
-                            background: linear-gradient(to bottom right, $color-instagram, $color-instagram-secondary)
+                            background: transparentize($color-instagram, 0.4)
+                            background: -moz-radial-gradient(top left, transparentize($color-instagram, 0.4), transparentize($color-instagram-secondary, 0.4))
+                            background: linear-gradient(to bottom right, transparentize($color-instagram, 0.4), transparentize($color-instagram-secondary, 0.4))
                             color: $color-white
+                            color: lighten($color-instagram-secondary, $lighten-amount-focus)
                         &.email
-                            background: $color-email
+                            background: transparentize($color-email, 0.4)
                             color: $color-white
+                            color: lighten($color-email, $lighten-amount-focus)
 
                     &:first-child
                         padding-left: 5px
@@ -116,8 +123,7 @@ main
                 display: flex
                 justify-content: center
                 padding: 0.5rem 0
-                background: repeating-linear-gradient(-45deg,#f2a417,#f2a417 15px,$color-black 15px,$color-black 30px)
-
+                background: repeating-linear-gradient(-45deg,$color-warning,$color-warning 15px,$color-black 15px,$color-black 30px)
                 .closeButton
                     position: absolute
                     left: 0

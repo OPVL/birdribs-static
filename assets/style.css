@@ -88,36 +88,43 @@ main .hero .bottom .links a {
   text-decoration: none;
   flex-grow: 0.5;
   flex-shrink: 1;
+  background-blend-mode: multiply;
 }
 main .hero .bottom .links a:hover {
   flex-grow: 2;
   flex-shrink: 0.8;
 }
 main .hero .bottom .links a:hover.bandcamp {
-  background: #629aa9;
+  background: rgba(98, 154, 169, 0.6);
   color: #eee;
+  color: white;
 }
 main .hero .bottom .links a:hover.soundcloud {
-  background: #ff7700;
+  background: rgba(255, 119, 0, 0.6);
   color: #eee;
+  color: white;
 }
 main .hero .bottom .links a:hover.spotify {
-  background: #1db954;
+  background: rgba(29, 185, 84, 0.6);
   color: #eee;
+  color: white;
 }
 main .hero .bottom .links a:hover.threads {
-  background: #111;
+  background: rgba(17, 17, 17, 0.6);
   color: #eee;
+  color: #d0d0d0;
 }
 main .hero .bottom .links a:hover.instagram {
-  background: #405de6;
-  background: -moz-radial-gradient(top left, #405de6, #e1316c);
-  background: linear-gradient(to bottom right, #405de6, #e1316c);
+  background: rgba(64, 93, 230, 0.6);
+  background: -moz-radial-gradient(top left, rgba(64, 93, 230, 0.6), rgba(225, 49, 108, 0.6));
+  background: linear-gradient(to bottom right, rgba(64, 93, 230, 0.6), rgba(225, 49, 108, 0.6));
   color: #eee;
+  color: white;
 }
 main .hero .bottom .links a:hover.email {
-  background: #882a4c;
+  background: rgba(155, 65, 98, 0.6);
   color: #eee;
+  color: white;
 }
 main .hero .bottom .links a:first-child {
   padding-left: 5px;
