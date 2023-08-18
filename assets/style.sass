@@ -3,7 +3,8 @@
     padding: 0
 
 main
-    max-height: 100vh
+    // max-height: 100vh
+    max-height: 100%
     overflow: hidden
     width: 100vw
 
@@ -48,6 +49,7 @@ main
             flex-direction: column
             align-items: center
             .links
+                margin-bottom: 1rem
                 display: flex
                 justify-content: space-between
                 font-size: 32px
@@ -97,8 +99,7 @@ main
                     &:last-child
                         padding-right: 5px
 
-            .notice
-                margin-top: 1rem
+            #notice
                 background: white
                 width: 100vw
                 display: flex

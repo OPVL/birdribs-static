@@ -72,8 +72,8 @@
               <i class="fa-solid fa-envelope"></i>
             </a>
           </div>
-          <div class="notice">
-            <a class="closeButton" href="javascript:close()" data-close="notice"
+          <div id="notice">
+            <a class="closeButton" href="javascript:close()"
               ><i class="fa-solid fa-circle-xmark"></i
             ></a>
             <div class="content">
@@ -86,7 +86,8 @@
     <footer></footer>
     <script>
       function close() {
-        // console.log()
+        var x = document.getElementById("notice");
+        x.style.display = "none";
       }
     </script>
     <script
