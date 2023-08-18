@@ -1,9 +1,16 @@
+@import variables
+
 *
     margin: 0
     padding: 0
+    color: inherit
+    text-decoration: none
+    font-family: sans-serif
+
+body
+    overflow-x: hidden
 
 main
-    // max-height: 100vh
     max-height: 100%
     overflow: hidden
     width: 100vw
@@ -11,9 +18,8 @@ main
     .hero
         height: 100vh
         width: 100%
-        background: rgb(96,93,88)
+        background: $color-gray
         background: linear-gradient(175deg, rgba(96,93,88,0.5) 0%, rgba(235,228,218,0.8) 100%, rgba(237,230,220,0.8) 100%), url('/assets/img/hero.jpg')
-        background-image: url('/assets/img/hero.jpg') linear-gradient(45deg, black, transparent)
         background-position: center
         background-size: cover
         overflow: hidden
@@ -24,8 +30,7 @@ main
 
         h1
             text-align: center
-            color: black
-            font-family: system-ui
+            color: $color-black
             letter-spacing: 100px
             margin-right: -3.5rem
             font-family: 'Dokdo', cursive
@@ -56,8 +61,8 @@ main
                 width: 340px
                 border-radius: 20px
                 overflow: hidden
-                background: rgba(0,0,0,0.5)
-                color: white
+                background: rgba(17,17,17,0.5)
+                color: $color-white
                 @media screen and (max-width: 768px)
                     font-size: 24px
                     width: 280px
@@ -79,19 +84,25 @@ main
                         flex-grow: 2
                         flex-shrink: 0.8
                         &.bandcamp
-                            background: #629aa9
+                            background: $color-bandcamp
+                            color: $color-white
                         &.soundcloud
-                            background: #ff7700
+                            background: $color-soundcloud
+                            color: $color-white
                         &.spotify
-                            background: #1db954
+                            background: $color-spotify
+                            color: $color-white
                         &.threads
-                            background: #662e9e
+                            background: $color-threads
+                            color: $color-white
                         &.instagram
-                            background: #405de6
-                            background: -moz-radial-gradient(top left, #405de6, #e1316c)
-                            background: linear-gradient(to bottom right, #405de6, #e1316c)
+                            background: $color-instagram
+                            background: -moz-radial-gradient(top left, $color-instagram, $color-instagram-secondary)
+                            background: linear-gradient(to bottom right, $color-instagram, $color-instagram-secondary)
+                            color: $color-white
                         &.email
-                            background: #efed42
+                            background: $color-email
+                            color: $color-white
 
                     &:first-child
                         padding-left: 5px
@@ -100,47 +111,59 @@ main
                         padding-right: 5px
 
             #notice
-                background: white
+                background: $color-white
                 width: 100vw
                 display: flex
                 justify-content: center
                 padding: 0.5rem 0
-                background: repeating-linear-gradient(-45deg,#f2a417,#f2a417 15px,#141617 15px,#141617 30px)
+                background: repeating-linear-gradient(-45deg,#f2a417,#f2a417 15px,$color-black 15px,$color-black 30px)
 
                 .closeButton
                     position: absolute
                     left: 0
-                    color: white
+                    color: $color-white
                     margin: 0 12px
                     transition: color 0.2s ease-in-out
                     font-size: 18px
                     display: flex
                     align-items: center
                     justify-content: center
-                    text-decoration: none
                     width: 24px
                     height: 24px
                     @media screen and (max-width: 768px)
                         display: none
                     &:hover
-                        color: red
+                        color: $color-red
                 .content
-                    background: white
+                    background: $color-white
+                    color: $color-black
                     padding: 4px 8px
                     transition-property: color, background-color
-                    transition-duration: 1s
-                    transition-timing-function: ease-out
+                    transition-duration: 0.5s
+                    transition-timing-function: ease-in-out
                     @media screen and (max-width: 768px)
                         font-size: 12px
                         padding: 2px 4px
                         text-align: center
 
                     &:hover
-                        color: white
-                        background: black
+                        color: $color-white
+                        background: $color-black
 
                     a
-                        color: inherit
-                        text-decoration: none
-                        font-family: sans-serif
                         letter-spacing: 2.2px
+
+footer
+    background: $color-black
+    color: $color-white
+    .copyright
+        padding: 1rem
+        text-align: center
+        font-size: 12px
+        letter-spacing: 2px
+        text-transform: uppercase
+        a
+            transition: color 0.2s ease-in-out
+            color: $color-white
+            &:hover
+                color: $color-red

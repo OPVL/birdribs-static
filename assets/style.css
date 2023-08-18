@@ -1,6 +1,13 @@
 * {
   margin: 0;
   padding: 0;
+  color: inherit;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 main {
@@ -11,9 +18,8 @@ main {
 main .hero {
   height: 100vh;
   width: 100%;
-  background: rgb(96, 93, 88);
+  background: #605D58;
   background: linear-gradient(175deg, rgba(96, 93, 88, 0.5) 0%, rgba(235, 228, 218, 0.8) 100%, rgba(237, 230, 220, 0.8) 100%), url("/assets/img/hero.jpg");
-  background-image: url("/assets/img/hero.jpg") linear-gradient(45deg, black, transparent);
   background-position: center;
   background-size: cover;
   overflow: hidden;
@@ -24,8 +30,7 @@ main .hero {
 }
 main .hero h1 {
   text-align: center;
-  color: black;
-  font-family: system-ui;
+  color: #111;
   letter-spacing: 100px;
   margin-right: -3.5rem;
   font-family: "Dokdo", cursive;
@@ -62,8 +67,8 @@ main .hero .bottom .links {
   width: 340px;
   border-radius: 20px;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
+  background: rgba(17, 17, 17, 0.5);
+  color: #eee;
 }
 @media screen and (max-width: 768px) {
   main .hero .bottom .links {
@@ -90,23 +95,29 @@ main .hero .bottom .links a:hover {
 }
 main .hero .bottom .links a:hover.bandcamp {
   background: #629aa9;
+  color: #eee;
 }
 main .hero .bottom .links a:hover.soundcloud {
   background: #ff7700;
+  color: #eee;
 }
 main .hero .bottom .links a:hover.spotify {
   background: #1db954;
+  color: #eee;
 }
 main .hero .bottom .links a:hover.threads {
-  background: #662e9e;
+  background: #111;
+  color: #eee;
 }
 main .hero .bottom .links a:hover.instagram {
   background: #405de6;
   background: -moz-radial-gradient(top left, #405de6, #e1316c);
   background: linear-gradient(to bottom right, #405de6, #e1316c);
+  color: #eee;
 }
 main .hero .bottom .links a:hover.email {
-  background: #efed42;
+  background: #882a4c;
+  color: #eee;
 }
 main .hero .bottom .links a:first-child {
   padding-left: 5px;
@@ -115,24 +126,23 @@ main .hero .bottom .links a:last-child {
   padding-right: 5px;
 }
 main .hero .bottom #notice {
-  background: white;
+  background: #eee;
   width: 100vw;
   display: flex;
   justify-content: center;
   padding: 0.5rem 0;
-  background: repeating-linear-gradient(-45deg, #f2a417, #f2a417 15px, #141617 15px, #141617 30px);
+  background: repeating-linear-gradient(-45deg, #f2a417, #f2a417 15px, #111 15px, #111 30px);
 }
 main .hero .bottom #notice .closeButton {
   position: absolute;
   left: 0;
-  color: white;
+  color: #eee;
   margin: 0 12px;
   transition: color 0.2s ease-in-out;
   font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
   width: 24px;
   height: 24px;
 }
@@ -142,14 +152,15 @@ main .hero .bottom #notice .closeButton {
   }
 }
 main .hero .bottom #notice .closeButton:hover {
-  color: red;
+  color: #E1316C;
 }
 main .hero .bottom #notice .content {
-  background: white;
+  background: #eee;
+  color: #111;
   padding: 4px 8px;
   transition-property: color, background-color;
-  transition-duration: 1s;
-  transition-timing-function: ease-out;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 @media screen and (max-width: 768px) {
   main .hero .bottom #notice .content {
@@ -159,14 +170,30 @@ main .hero .bottom #notice .content {
   }
 }
 main .hero .bottom #notice .content:hover {
-  color: white;
-  background: black;
+  color: #eee;
+  background: #111;
 }
 main .hero .bottom #notice .content a {
-  color: inherit;
-  text-decoration: none;
-  font-family: sans-serif;
   letter-spacing: 2.2px;
+}
+
+footer {
+  background: #111;
+  color: #eee;
+}
+footer .copyright {
+  padding: 1rem;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+footer .copyright a {
+  transition: color 0.2s ease-in-out;
+  color: #eee;
+}
+footer .copyright a:hover {
+  color: #E1316C;
 }
 
 /*# sourceMappingURL=style.css.map */
