@@ -127,19 +127,21 @@ main
                 .closeButton
                     position: absolute
                     left: 0
-                    color: $color-white
+                    color: $color-danger
                     margin: 0 12px
                     transition: color 0.2s ease-in-out
                     font-size: 18px
                     display: flex
                     align-items: center
                     justify-content: center
-                    width: 24px
-                    height: 24px
+                    width: 25px
+                    height: 25px
+                    background: $color-black
+                    border-radius: 100%
                     @media screen and (max-width: 768px)
                         display: none
                     &:hover
-                        color: $color-red
+                        color: darken($color-danger, 10%)
                 .content
                     background: $color-white
                     color: $color-black

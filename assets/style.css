@@ -143,15 +143,17 @@ main .hero .bottom #notice {
 main .hero .bottom #notice .closeButton {
   position: absolute;
   left: 0;
-  color: #eee;
+  color: #E1316C;
   margin: 0 12px;
   transition: color 0.2s ease-in-out;
   font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
+  background: #111;
+  border-radius: 100%;
 }
 @media screen and (max-width: 768px) {
   main .hero .bottom #notice .closeButton {
@@ -159,7 +161,7 @@ main .hero .bottom #notice .closeButton {
   }
 }
 main .hero .bottom #notice .closeButton:hover {
-  color: #E1316C;
+  color: #c31c54;
 }
 main .hero .bottom #notice .content {
   background: #eee;
