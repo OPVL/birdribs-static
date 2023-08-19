@@ -1,6 +1,6 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/lloydcul/birdribs
+    - export DEPLOYPATH=/home/lloydcul/birdribs/
     - /bin/cp index.php $DEPLOYPATH
     - /bin/cp robots.txt $DEPLOYPATH
     - /bin/cp -R assets $DEPLOYPATH/assets
