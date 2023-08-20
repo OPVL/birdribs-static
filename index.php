@@ -81,6 +81,11 @@ $nextEvent = getNextEvent();
   <main>
     <div class="hero">
       <h1>birdribs</h1>
+      <div class="top">
+        <a href="https://epk.birdribs.uk" class="epk-button" target="_blank" rel="noreferrer"><i
+            class="fa-solid fa-arrow-up-right-from-square"></i>
+          EPK</a>
+      </div>
       <div class="bottom">
         <div class="links">
           <a class="bandcamp" href="https://birdribs.bandcamp.com/" target="_blank" rel="noopener noreferrer"
