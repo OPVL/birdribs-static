@@ -1,0 +1,28 @@
+{
+  "name": "birdribs-static",
+  "version": "1.0.0",
+  "description": "a simple static html & css website for birdribs.uk",
+  "main": "index.php",
+  "scripts": {
+    "build": "./node_modules/.bin/sass --update ./assets/sass/main.sass:./public/css/main.css",
+    "watch": "./node_modules/.bin/sass --watch ./assets/sass/main.sass:./public/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OPVL/birdribs-static.git"
+  },
+  "keywords": [
+    "birdribs",
+    "sass",
+    "php"
+  ],
+  "author": "opvl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OPVL/birdribs-static/issues"
+  },
+  "homepage": "https://github.com/OPVL/birdribs-static#readme",
+  "devDependencies": {
+    "sass": "^1.66.1"
+  }
+}
