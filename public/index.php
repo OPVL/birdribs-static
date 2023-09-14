@@ -24,6 +24,11 @@ const EVENTS = [
     'date' => '24-09-2023',
   ],
   [
+    'link' => 'https://www.wegottickets.com/event/593587/',
+    'date' => '07-10-2023',
+    'label' => 'next show: 7th Oct - Slackrr @ FnF, Cheltenham'
+  ],
+  [
     'link' => 'https://instagram.com/birdribsband',
     'label' => 'next show: 20th Dec - Punk Rock Stars In Their Eyes, Cheltenham',
     'date' => '20-12-2023'
@@ -60,20 +65,20 @@ $nextEvent = getNextEvent();
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/public/css/main.css" />
+  <link rel="stylesheet" href="/css/main.css" />
 
   <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/public/favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="/public/favicon/site.webmanifest" />
-  <link rel="mask-icon" href="/public/favicon/safari-pinned-tab.svg" color="#605d58" />
-  <link rel="shortcut icon" href="/public/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#605d58" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
   <meta name="apple-mobile-web-app-title" content="BIRDRIBS" />
   <meta name="application-name" content="BIRDRIBS" />
   <meta name="msapplication-TileColor" content="#605d58" />
-  <meta name="msapplication-TileImage" content="/public/favicon/mstile-144x144.png" />
-  <meta name="msapplication-config" content="/public/favicon/browserconfig.xml" />
+  <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
+  <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
   <meta name="theme-color" content="#605d58" />
 </head>
 
@@ -82,38 +87,46 @@ $nextEvent = getNextEvent();
     <div class="hero">
       <h1>birdribs</h1>
       <div class="top">
-        <a href="https://epk.birdribs.uk" class="epk-button" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+        <a href="https://epk.birdribs.uk" class="epk-button" target="_blank" rel="noreferrer"><i
+            class="fa-solid fa-arrow-up-right-from-square"></i>
           EPK</a>
       </div>
       <div class="bottom">
         <div class="links">
-          <a class="bandcamp" href="https://birdribs.bandcamp.com/" target="_blank" rel="noopener noreferrer" aria-label="bandcamp">
+          <a class="bandcamp" href="https://birdribs.bandcamp.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="bandcamp">
             <i class="fa-brands fa-bandcamp"></i>
           </a>
 
-          <a class="spotify" href="https://open.spotify.com/artist/2n1IIctLetLRqR28XNSVfz" target="_blank" rel="noopener noreferrer" aria-label="spotify">
+          <a class="spotify" href="https://open.spotify.com/artist/2n1IIctLetLRqR28XNSVfz" target="_blank"
+            rel="noopener noreferrer" aria-label="spotify">
             <i class="fa-brands fa-spotify"></i>
           </a>
 
-          <a class="instagram" href="https://www.instagram.com/birdribsband/" target="_blank" rel="noopener noreferrer" aria-label="instagram">
+          <a class="instagram" href="https://www.instagram.com/birdribsband/" target="_blank" rel="noopener noreferrer"
+            aria-label="instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
 
-          <a class="soundcloud" href="https://soundcloud.com/birdribs" target="_blank" rel="noopener noreferrer" aria-label="soundcloud">
+          <a class="soundcloud" href="https://soundcloud.com/birdribs" target="_blank" rel="noopener noreferrer"
+            aria-label="soundcloud">
             <i class="fa-brands fa-soundcloud"></i>
           </a>
 
-          <a class="threads" href="https://www.threads.net/@birdribsband" target="_blank" rel="noopener noreferrer" aria-label="threads">
+          <a class="threads" href="https://www.threads.net/@birdribsband" target="_blank" rel="noopener noreferrer"
+            aria-label="threads">
             <i class="fa-brands fa-threads"></i>
           </a>
 
-          <a class="email" href="mailto:birdribsband@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="email">
+          <a class="email" href="mailto:birdribsband@gmail.com" target="_blank" rel="noopener noreferrer"
+            aria-label="email">
             <i class="fa-solid fa-envelope"></i>
           </a>
         </div>
-        <?php if ($nextEvent) : ?>
+        <?php if ($nextEvent): ?>
           <div id="notice">
-            <a class="closeButton" href="javascript:close()" aria-label="close notice button"><i class="fa-solid fa-circle-xmark"></i></a>
+            <a class="closeButton" href="javascript:close()" aria-label="close notice button"><i
+                class="fa-solid fa-circle-xmark"></i></a>
             <div class="content">
               <a href="<?php echo ($nextEvent['link']); ?>" target="_blank" rel="noreferrer noopener">
                 <?php echo ($nextEvent['label']); ?>
