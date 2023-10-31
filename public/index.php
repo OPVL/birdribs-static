@@ -30,8 +30,13 @@ const EVENTS = [
   ],
   [
     'link' => 'https://instagram.com/birdribsband',
-    'label' => 'next show: 20th Dec - Punk Rock Stars In Their Eyes, Cheltenham',
-    'date' => '20-12-2023'
+    'label' => 'next show: 1st Dec - AudioJunkFood, Cheltenham',
+    'date' => '01-12-2023'
+  ],
+  [
+    'link' => 'https://instagram.com/birdribsband',
+    'label' => 'next show: 23rd Dec - Punk Rock Stars In Their Eyes, Cheltenham',
+    'date' => '23-12-2023'
   ]
 ];
 
@@ -85,7 +90,8 @@ $nextEvent = getNextEvent();
 <body>
   <main>
     <div class="hero">
-      <h1>birdribs</h1>
+      <!-- <h1>birdribs</h1> -->
+      <img src="/img/logo.png" alt="birdribs">
       <div class="top">
         <a href="https://epk.birdribs.uk" class="epk-button" target="_blank" rel="noreferrer"><i
             class="fa-solid fa-arrow-up-right-from-square"></i>
