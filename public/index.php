@@ -34,6 +34,11 @@ const EVENTS = [
     'date' => '01-12-2023'
   ],
   [
+    'link' => 'https://www.instagram.com/p/CzN-WkCsH4S/',
+    'label' => 'next show: BotB @ Warehouse 4, Gloucester',
+    'date' => '09-11-2023'
+  ],
+  [
     'link' => 'https://instagram.com/birdribsband',
     'label' => 'next show: 23rd Dec - Punk Rock Stars In Their Eyes, Cheltenham',
     'date' => '23-12-2023'
