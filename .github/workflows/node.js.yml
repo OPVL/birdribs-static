@@ -20,6 +20,7 @@ jobs:
         node-version: '18.x'
         check-latest: true
         cache: 'npm'
+    - run: npm ci
     - run: npm run build
 
   zip:
