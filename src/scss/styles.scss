@@ -1,0 +1,305 @@
+@import "bootstrap/scss/bootstrap";
+@import "variables";
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    max-height: 100%;
+    overflow: hidden;
+    width: 100vw;
+
+    .hero {
+        height: 100vh;
+        width: 100%;
+        background: $color-gray;
+        background: linear-gradient(175deg, rgba(96, 93, 88, 0.5) 0%, rgba(235, 228, 218, 0.8) 100%, rgba(237, 230, 220, 0.8) 100%), url('/img/BIRDRIBS-48.jpg');
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h1 {
+            text-align: center;
+            color: $color-black;
+            letter-spacing: 100px;
+            margin-right: -3.5rem;
+            font-family: 'Dokdo', cursive;
+            font-size: 7rem;
+            text-transform: uppercase;
+
+            @media screen and (max-width: 1280px) {
+                font-size: 5rem;
+                letter-spacing: 50px;
+                margin-right: -2.5rem;
+            }
+
+            @media screen and (max-width: 768px) {
+                font-size: 2rem;
+                letter-spacing: 20px;
+                margin-right: -1rem;
+            }
+        }
+
+        img {
+            max-width: 70%;
+
+            @media screen and (max-width: 1280px) {
+                max-width: 80%;
+            }
+
+            @media screen and (max-width: 768px) {
+                max-width: 90%;
+            }
+        }
+
+        .top {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .links {
+                margin-bottom: 1rem;
+                display: flex;
+                justify-content: space-between;
+                font-size: 32px;
+                width: 340px;
+                border-radius: 20px;
+                overflow: hidden;
+                background: rgba(17, 17, 17, 0.5);
+                color: $color-white;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 24px;
+                    width: 280px;
+                    bottom: 40px;
+                }
+
+                a {
+                    transition: all 0.2s ease-in-out;
+                    color: inherit;
+                    width: 100%;
+                    height: 48px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    flex-grow: 0.5;
+                    flex-shrink: 1;
+                    background-blend-mode: multiply;
+
+                    &:hover {
+                        flex-grow: 2;
+                        flex-shrink: 0.8;
+
+                        &.bandcamp {
+                            background: transparentize($color-bandcamp, 0.4);
+                            color: $color-white;
+                            color: lighten($color-bandcamp, $lighten-amount-focus);
+                        }
+
+                        &.soundcloud {
+                            background: transparentize($color-soundcloud, 0.4);
+                            color: $color-white;
+                            color: lighten($color-soundcloud, $lighten-amount-focus);
+                        }
+
+                        &.spotify {
+                            background: transparentize($color-spotify, 0.4);
+                            color: $color-white;
+                            color: lighten($color-spotify, $lighten-amount-focus);
+                        }
+
+                        &.threads {
+                            background: transparentize($color-threads, 0.4);
+                            color: $color-white;
+                            color: lighten($color-threads, $lighten-amount-focus);
+                        }
+
+                        &.instagram {
+                            background: transparentize($color-instagram, 0.4);
+                            background: -moz-radial-gradient(top left, transparentize($color-instagram, 0.4), transparentize($color-instagram-secondary, 0.4));
+                            background: linear-gradient(to bottom right, transparentize($color-instagram, 0.4), transparentize($color-instagram-secondary, 0.4));
+                            color: $color-white;
+                            color: lighten($color-instagram-secondary, $lighten-amount-focus);
+                        }
+
+                        &.email {
+                            background: transparentize($color-email, 0.4);
+                            color: $color-white;
+                            color: lighten($color-email, $lighten-amount-focus);
+                        }
+                    }
+
+                    &:first-child {
+                        padding-left: 5px;
+                    }
+
+                    &:last-child {
+                        padding-right: 5px;
+                    }
+                }
+            }
+
+            #notice {
+                background: $color-white;
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                padding: 0.5rem 0;
+                background: repeating-linear-gradient(-45deg, $color-warning, $color-warning 15px, $color-black 15px, $color-black 30px);
+
+                .closeButton {
+                    position: absolute;
+                    left: 0;
+                    color: $color-danger;
+                    margin: 0 12px;
+                    transition: color 0.2s ease-in-out;
+                    font-size: 18px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 25px;
+                    height: 25px;
+                    background: $color-black;
+                    border-radius: 100%;
+
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
+
+                    &:hover {
+                        color: darken($color-danger, 10%);
+                    }
+                }
+
+                .content {
+                    background: $color-white;
+                    color: $color-black;
+                    padding: 4px 8px;
+                    transition-property: color, background-color;
+                    transition-duration: 0.5s;
+                    transition-timing-function: ease-in-out;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 12px;
+                        padding: 2px 4px;
+                        text-align: center;
+                    }
+
+                    &:hover {
+                        color: $color-white;
+                        background: $color-black;
+                    }
+
+                    a {
+                        color: inherit;
+                        letter-spacing: 2.2px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background: $color-black;
+    color: $color-white;
+
+    .copyright {
+        padding: 1rem;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        a {
+            transition: color 0.2s ease-in-out;
+            color: $color-white;
+
+            &:hover {
+                color: $color-red;
+            }
+        }
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $color-black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $color-gray;
+    transition: ease-in-out;
+
+    &:hover {
+        background: $color-danger;
+        cursor: pointer;
+    }
+}
+
+.epk-button {
+    opacity: 0.6;
+    border: 4px solid $color-black;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: $color-black;
+    text-decoration: none;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    transition-property: background, color, opacity;
+    transition-duration: 0.2s;
+    font-weight: 600;
+    font-size: 12px;
+    margin: 20px 40px;
+
+    @media screen and (max-width: 900px) {
+        display: none;
+    }
+
+    &:hover {
+        background: $color-black;
+        color: $color-white;
+        opacity: 0.8;
+    }
+
+    i {
+        margin-right: 12px;
+    }
+}

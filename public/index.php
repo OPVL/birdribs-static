@@ -2,48 +2,6 @@
 <!-- THE REST ARE IRRELEVANT, CUNT -->
 <?php
 
-const EVENTS = [
-  [
-    'link' => '',
-    'label' => 'next show: 1st July - Freestival, Cheltenham',
-    'date' => '01-07-2023'
-  ],
-  [
-    'link' => '',
-    'label' => 'next show: 29th July - VineStock, Cheltenham',
-    'date' => '29-07-2023'
-  ],
-  [
-    'link' => 'https://www.instagram.com/p/Cv2cN9FNt-f/',
-    'label' => 'next show: 27th Aug - Frog & Fiddle, Cheltenham',
-    'date' => '27-08-2023'
-  ],
-  [
-    'link' => 'https://instagram.com/birdribsband',
-    'label' => 'next show: 24th Sep - FrogFest, Cheltenham',
-    'date' => '24-09-2023',
-  ],
-  [
-    'link' => 'https://www.wegottickets.com/event/593587/',
-    'date' => '07-10-2023',
-    'label' => 'next show: 7th Oct - Slackrr @ FnF, Cheltenham'
-  ],
-  [
-    'link' => 'https://instagram.com/birdribsband',
-    'label' => 'next show: 1st Dec - AudioJunkFood, Cheltenham',
-    'date' => '01-12-2023'
-  ],
-  [
-    'link' => 'https://www.instagram.com/p/CzN-WkCsH4S/',
-    'label' => 'next show: BotB @ Warehouse 4, Gloucester',
-    'date' => '09-11-2023'
-  ],
-  [
-    'link' => 'https://instagram.com/birdribsband',
-    'label' => 'next show: 23rd Dec - Punk Rock Stars In Their Eyes, Cheltenham',
-    'date' => '23-12-2023'
-  ]
-];
 
 function getNextEvent()
 {
@@ -102,7 +60,7 @@ $nextEvent = getNextEvent();
             class="fa-solid fa-arrow-up-right-from-square"></i>
           EPK</a>
       </div>
-      <div class="bottom">
+      <div class="bottom" id="bottomMount">
         <div class="links">
           <a class="bandcamp" href="https://birdribs.bandcamp.com/" target="_blank" rel="noopener noreferrer"
             aria-label="bandcamp">
