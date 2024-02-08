@@ -1,14 +1,14 @@
 {
   "name": "birdribs-static",
+  "type": "module",
   "version": "1.0.0",
   "description": "a simple static html & css website for birdribs.uk",
   "main": "index.php",
   "scripts": {
     "start": "vite",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite build",
-    "build": "sass --update ./assets/sass/main.sass:./public/css/main.css",
-    "watch": "sass --watch ./assets/sass/main.sass:./public/css/main.css"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",

@@ -1,11 +1,17 @@
-const path = require('path')
+import { defineConfig } from 'vite'
 
-export default {
+import path from 'path'
+
+export default defineConfig({
   root: path.resolve(__dirname, 'src'),
   build: {
-    outDir: '../dist'
+    emptyOutDir: true,
+    outDir: '../dist',
+    minify: 'esbuild',
+    sourcemap: true,
+    target: 'es2015',
   },
   server: {
     port: 8082
   }
-}
+})
