@@ -1,6 +1,6 @@
 # birdribs static site
 
-This is the source code for the birdribs static site. It is built using [sass](https://sass-lang.com/) & [PHP 8.2](https://www.php.net/).
+This is the source code for the birdribs static site. It is built using [sass](https://sass-lang.com/) JS & html. It is built using [Vite](https://vitejs.dev/)
 
 ## Table of Contents
 
@@ -16,9 +16,8 @@ This is the source code for the birdribs static site. It is built using [sass](h
 ## Prerequisites
 
 - [npm](https://www.npmjs.com/)
-- [PHP 8+](https://www.php.net/)
 
-## Building
+## Building (for production)
 
 1. open a terminal in the root directory of the project
 2. run `npm install`
@@ -26,20 +25,20 @@ This is the source code for the birdribs static site. It is built using [sass](h
 
 ### Building for development
 
-run `npm run watch` to watch for changes and rebuild automatically
+run `npm run preview` to watch for html, js & scss changes and rebuild automatically
 
 ## Running
 
 1. open a terminal in the root directory of the project
-2. run `php -S localhost:8000`
-3. open a browser and navigate to `localhost:8000`
+2. run `npm start`
+3. open a browser and navigate to `localhost:8082`
 4. to stop the server, press `ctrl + c` in the terminal
 
 ## Deployment
 
-1. copy/clone the project to the server
-2. link/copy repository to the web root
-3. profit?
+1. `npm run build`
+2. zip contents of `dist` folder in project root
+3. unzip in to server root dir (eg. `www/`)
 
 ## Contributing
 
