@@ -15,7 +15,10 @@ jobs:
       contents: write
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js 
+    - name: package-version
+      id: package-version
+      uses: martinbeentjes/npm-get-version-action@v1.3.1
+    - name: vite-build
       uses: actions/setup-node@v3
       with:
         node-version: '18.x'
@@ -23,17 +26,19 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build
-    - name: Archive Release
+    - name: archive-release
       uses: thedoctor0/zip-release@0.7.6
       with:
         directory: 'dist'
         type: 'zip'
         filename: 'release.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
-    - name: Upload Release
+    - name: upload-release
       uses: ncipollo/release-action@v1.12.0
       with:
-        artifacts: "release.zip"
+        allowUpdates: true
+        artifacts: "dist/release.zip"
+        tag: ${{ steps.package-version.outputs.current-version }}
         token: ${{ secrets.GITHUB_TOKEN }}
   # zip:
   #   runs-on: ubuntu-latest
