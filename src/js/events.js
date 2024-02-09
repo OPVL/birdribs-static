@@ -50,8 +50,13 @@ const events = [
         "date": "09-02-2024"
     },
     {
+        "link": "https://www.songkick.com/concerts/416879",
+        "label": "next show: 1st March - M2TM @ Frog & Fiddle, Cheltenham",
+        "date": "01-03-2024"
+    },
+    {
         "link": "https://www.songkick.com/concerts/41688011-pet-needs-at-frog-and-fiddle",
-        "label": "next show: 10th Feb - Pet Needs @ Frog & Fiddle, Cheltenham",
+        "label": "next show: 5th May - Pet Needs @ Frog & Fiddle, Cheltenham",
         "date": "05-05-2024"
     }
 ];

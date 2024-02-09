@@ -155,6 +155,12 @@ main {
                             color: $color-white;
                             color: lighten($color-email, $lighten-amount-focus);
                         }
+
+                        &.songkick-calendar {
+                            background: transparentize($color-songkick, 0.4);
+                            color: $color-white;
+                            color: lighten($color-songkick, $lighten-amount-focus);
+                        }
                     }
 
                     &:first-child {

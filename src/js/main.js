@@ -14,8 +14,8 @@ const nextEvent = () => {
         // parse date with moment and compare
         moment(a.date, 'DD-MM-YYYY').isAfter(moment(b.date, 'DD-MM-YYYY'));
     }).filter((event) => {
-        // filter out events that have already happened
-        return moment(event.date, 'DD-MM-YYYY').isAfter(moment());
+        // filter out events that have already happened, but keep if they are today
+        return moment(event.date, 'DD-MM-YYYY').isAfter(moment().subtract(1, 'days'));
     });
 
     if (futureEvents.length === 0) {
@@ -25,10 +25,11 @@ const nextEvent = () => {
     return futureEvents[0]; 
 };
 
-export const close = () => {
-    const notice = document.getElementById('notice');
-    notice.style.display = 'none';
-};
+// function doesn't work as cannot close or modify the notice as the script is not a child of the DOM
+// export const close = () => {
+//     const notice = document.getElementById('notice');
+//     notice.style.display = 'none';
+// };
 
 window.addEventListener('DOMContentLoaded', () => {
     const event = nextEvent();
