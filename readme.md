@@ -1,4 +1,6 @@
-# birdribs static site
+# BIRDRIBS.uk
+
+~uk.birdribs.opvl~
 
 This is the source code for the birdribs static site. It is built using [sass](https://sass-lang.com/) JS & html. It is built using [Vite](https://vitejs.dev/)
 
