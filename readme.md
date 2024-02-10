@@ -44,7 +44,7 @@ run `npm run preview` to watch for html, js & scss changes and rebuild automatic
 
 ## Contributing
 
-Contributions are currently not accepted. If you have a suggestion, please open an issue.
+Contributions are currently not accepted. If you have a suggestion, please open an issue
 
 ## License
 
