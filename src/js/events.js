@@ -50,15 +50,20 @@ const events = [
         "date": "09-02-2024"
     },
     {
-        "link": "https://www.songkick.com/concerts/416879",
-        "label": "next show: 1st March - M2TM @ Frog & Fiddle, Cheltenham",
-        "date": "01-03-2024"
+        "link": "https://www.songkick.com/concerts/41768194-deadheadz-at-frog-and-fiddle",
+        "label": "next show: 9th March - DeadFezt @ Frog & Fiddle, Cheltenham",
+        "date": "09-03-2024"
+    },
+    {
+        "link": "https://www.songkick.com/festivals/9351-underground/id/41754057-underground-festival-2024",
+        "label": "next show: 30th March - Underground Festival, Blackfriars, Gloucester",
+        "date": "30-03-2024"
     },
     {
         "link": "https://www.songkick.com/concerts/41688011-pet-needs-at-frog-and-fiddle",
         "label": "next show: 5th May - Pet Needs @ Frog & Fiddle, Cheltenham",
         "date": "05-05-2024"
-    }
+    },
 ];
 
 export default events;
