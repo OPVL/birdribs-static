@@ -30,7 +30,7 @@ jobs:
       with:
         directory: 'dist'
         type: 'zip'
-        filename: 'release-${{ steps.package-version.outputs.current-version }}.zip'
+        filename: "release-${{ steps.package-version.outputs.current-version }}.zip"
         exclusions: '*.git* /*node_modules/* .editorconfig'
     - name: upload-release
       uses: ncipollo/release-action@v1.12.0
