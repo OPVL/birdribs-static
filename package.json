@@ -1,7 +1,7 @@
 {
   "name": "birdribs-static",
   "type": "module",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "a simple static html & css website for birdribs.uk",
   "main": "index.php",
   "scripts": {
