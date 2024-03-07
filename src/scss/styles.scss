@@ -238,6 +238,7 @@ main {
 footer {
     background: $color-black;
     color: $color-white;
+    width: 100vw;
 
     .copyright {
         padding: 1rem;
@@ -250,6 +251,31 @@ footer {
             transition: color 0.2s ease-in-out;
             color: $color-white;
 
+            &:hover {
+                color: $color-red;
+            }
+        }
+    }
+
+    .tags {
+        padding: 0 3rem;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $color-gray;
+        flex-wrap: wrap;
+
+        * {
+            margin: 0 8px;
+        }
+
+        a {
+            transition: color 0.2s ease-in-out;
+            text-decoration: none;
+            color: inherit;
             &:hover {
                 color: $color-red;
             }
@@ -308,4 +334,8 @@ footer {
     i {
         margin-right: 12px;
     }
+}
+
+.no-display {
+    display: none;
 }
